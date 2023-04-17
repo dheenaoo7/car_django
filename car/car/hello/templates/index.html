@@ -1,0 +1,24 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Simple Car-Recommender</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+</head>
+<body>
+	<div class="container">
+		<h1>Simple Car-Recommender</h1>
+		<form action="/submit" method="post">
+            {% csrf_token %}
+			<label for="input1">MIN PRICE:</label>
+			<input type="text" id="input1" name="input1" placeholder="Enter Input 1">
+
+			<label for="input2">MAX PRICE:</label>
+			<input type="text" id="input2" name="input2" placeholder="Enter Input 2">
+
+			<input type="submit" value="Submit">
+		</form>
+	</div>
+</body>
+</html>
